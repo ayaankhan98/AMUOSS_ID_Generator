@@ -16,7 +16,7 @@ Logo = '''
 def authenticate(password):
     hashed_pass = sha256(password.encode('utf-8')).hexdigest()
 
-    with open('hashedpass.txt','r') as f:
+    with open('security\hashedpass.txt','r') as f:
         correct_pass = f.readline()
 
     if hashed_pass == correct_pass:
